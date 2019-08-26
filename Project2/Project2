@@ -1,0 +1,10 @@
+import os
+#A very simple script which prints out every scripts I have made for this class
+#This script is simple but I find it useful to know how to find file extensions
+
+#Specify here which directory, if you select "." That is  your current directory, if you select "/" that is the entire C: drive
+#I have specified the scripts folder because c: is full of scripts that I don't care about.
+for root, dirs, files in os.walk("/it3038c-scripts"):  
+    for filename in files:
+        if filename.endswith((".sh",".js",".py")):
+            print(filename)
